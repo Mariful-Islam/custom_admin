@@ -2,8 +2,11 @@ import React from 'react'
 import edit from '../../assests/edit.svg'
 import trash from '../../assests/trash.png'
 import axios from 'axios'
+import { useNavigation, useNavigate } from 'react-router-dom'
 
 const Table = ({service, getServices}) => {
+
+  const navigate = useNavigate()
 
     function createMarkup() {
         return {__html: service.description};
@@ -44,7 +47,7 @@ const Table = ({service, getServices}) => {
         <p>{service.name}</p>
         <p>{MyComponent()}</p>
         <p>
-            <img src={edit} alt='' onClick={()=>updateHandle(service.id)}/>
+            <img src={edit} alt='' onClick={()=>navigate(`/saaddev/service/update/${service.id}`)}/>
             <img src={trash} alt='' onClick={()=>deleteHandle(service.id)}/>
         </p>
     </div>

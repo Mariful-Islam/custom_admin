@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-
+import { useNavigation, Link } from 'react-router-dom'
 import Table from './Table'
 
 
 
 const Service = () => {
+  // let navigate = useNavigation()
   let [services, setServices] = useState([])
 
     let getServices= async()=>{
@@ -21,8 +22,11 @@ const Service = () => {
   return (
     <div>
       <div className='wrapper'>
-        <strong className='heading'>Service</strong>
-        <button className='add'>+   Add Service</button>
+        {/* <strong className='heading'>Service</strong> */}
+        <h1>Service</h1>
+        {/* <button className='add' onClick={()=>navigate('/saaddev/service/add')}>+   Add Service</button> */}
+        <Link to='/saaddev/service/add' className='add'>+   Add Service</Link>
+        
         <div className='table'>
           <div className='table_head'>
             <strong>id</strong>

@@ -9,6 +9,8 @@ import Service from './components/Saaddev/Service';
 import Project from './components/Saaddev/Project'
 import Products from './components/Ecom/Products';
 import Navbar from './components/Navbar';
+import AddService from './components/Saaddev/AddService';
+import UpdateService from './components/Saaddev/UpdateService';
 
 
 
@@ -25,7 +27,8 @@ function App() {
             <Route Component={Service} path='/saaddev/service'/>
             <Route Component={Project} path='/saaddev/project'/>
             <Route Component={Products} path='/ecom/product'/>
-
+            <Route Component={AddService} path='/saaddev/service/add'/>
+            <Route Component={UpdateService} path='/saaddev/service/update/:id'/>
         </Routes>
        </BrowserRouter>
     </div>
