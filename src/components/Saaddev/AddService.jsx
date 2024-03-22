@@ -30,8 +30,9 @@ const AddService = () => {
   }
 
   return (
-    <div>
+    <div className='wrapper' >
       <h1>Add Service</h1>
+      <button className='add' onClick={()=>navigate('/saaddev/service')} style={{position:'absolute', left:0, top:80, width: 80 }}>← Back</button>
         <form method='POST' onSubmit={(e)=>addHandler(e)}>
             <input type='text' placeholder='name' name='name'/>
             <input type='file' onChange={(e)=>setImage(e.target.files[0])}/>

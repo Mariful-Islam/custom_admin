@@ -36,10 +36,7 @@ const Table = ({service, getServices}) => {
         getServices()
       }
 
-      let updateHandle = () => {
-        console.log('update')
-      }
-
+      
   return (
     <div className='table_row'>
         <p><img style={{height: 30, width:30, borderRadius:'50%', objectFit:'cover', padding:0, margin:0}} 
